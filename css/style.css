@@ -1,0 +1,386 @@
+body{
+	background-color: #0bdbb6;
+}
+.mainContainer{
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content:center;
+	align-content:space-around;
+	position:relative;
+	width:100%;
+	height:100%;
+	background-color: #0bdbb6;
+}
+.container{
+	display:flex;
+	flex-direction: horizontal;
+	align-items:center;
+	justify-content: center;
+	opacity:1;
+	transition: all 1s ease-in-out;
+	text-align:center;
+}
+
+.fig{
+	font-size: 300px;
+	font-weight: 900;
+	color:#191919;
+}
+
+.inputBox {
+    background: transparent;
+    border: 0px solid black;
+    width: 700px;
+    height: 250px;
+
+}
+.inputBox:read-write:focus {
+     outline: none;
+}
+
+
+
+.hide{
+	opacity:0;
+	transform: translateX(0px);
+}
+
+
+.visible{
+	opacity:1;
+}
+
+
+.icon-info-circled-alt{
+	position:absolute;
+	left:10px;
+	top:10px;
+	font-size:70px;
+	z-index:1;
+}
+
+.icon-info-circled-alt:hover{
+	color:#666;
+	cursor:pointer;
+}
+
+.icon-chart-bar{
+	position:absolute;
+	left:10px;
+	bottom:10px;
+	font-size:70px;
+	z-index:1;
+}
+
+.icon-chart-bar:hover{
+	color: #666;
+	cursor:pointer;
+}
+.icon-cw{
+	position:absolute;
+	right:10px;
+	bottom:10px;
+	font-size:70px;
+	z-index:1;
+}
+
+.icon-cw:hover{
+	color: #666;
+	cursor:pointer;
+}
+
+/* The side navigation menu */
+.leftSide {
+    height: 61vh; /* 100% Full-height */
+    width: 300px; /* 0 width - change this with JavaScript */
+    margin-left: -300px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #0bdbb6; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    margin-left: 10px;
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 1s; /* 0.5 second transition effect to slide in the sidenav */
+    text-align: justify;
+}
+
+
+
+
+
+
+/* Position and style the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    bottom: 25px;
+    left: 45px;
+    font-size: 36px;
+    font-weight: 600;
+    margin-left: 50px;
+    color: black;
+    text-decoration:none;
+
+}
+.closebtn:hover{
+	color:#666;
+}
+
+/* The navigation menu links */
+.firstP, .secondP{
+    padding: 2px 2px 2px 32px;
+    text-decoration: none;
+    font-size: 1em;
+    color: #191919;
+    display: block;
+    opacity:1;
+    transition: 1s
+}
+
+
+
+.stats {
+    height: 17vh; /* 100% Full-height */
+    width: 200px; /* 0 width - change this with JavaScript */
+    margin-left: -200px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    bottom: 50px;
+    left: 0;
+    background-color: #0bdbb6; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    margin-left: 10px;
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 1s; /* 0.5 second transition effect to slide in the sidenav */
+    text-align: justify;
+	
+	padding: 2px 2px 2px 32px;
+    text-decoration: none;
+    font-size: 1em;
+    color: #191919;
+    display: block;
+    opacity:1;
+    transition: 1s
+}
+
+.stats .streak{
+	position:absolute;
+	bottom:130px;
+	left:10px;
+
+	font-size:2em;
+	font-weight:600;
+	 padding: 2px 2px 2px 18px;
+}
+.stats .time{
+	position:absolute;
+	bottom:100px;
+	left:10px;
+
+	font-size:2em;
+	font-weight:600;
+	 padding: 2px 2px 2px 18px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+/*#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}*/
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/*@media screen and (max-height: 450px) {
+    .leftSide {padding-top: 15px;}
+    .leftSide a {font-size: 18px;}
+}*/
+
+
+
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
+
+
+@keyframes wobble {
+  from {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.wobble {
+  -webkit-animation-name: wobble;
+  animation-name: wobble;
+}
+
+@keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
