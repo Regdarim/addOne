@@ -111,6 +111,18 @@ $('.icon-info-circled-alt').on('mouseover', function() {
     $('.icon-info-circled-alt').css('z-index', '1');
 })
 
+$("body").on("mousemove",function(event) {
+    if (event.pageX < 25) {
+        $('.leftSide').css('margin-left', '0');
+    }
+});
+
+$("body").on("mousemove",function(event) {
+    if (event.pageX >= 300) {
+        $('.leftSide').css('margin-left', '-300');
+    }
+});
+
 $('.icon-info-circled-alt').on('click', function() {
     $('.leftSide').css('margin-left', '-300');
 
@@ -121,6 +133,9 @@ $('.icon-info-circled-alt').on('click', function() {
 })
 
 $('.icon-chart-bar').on('click', function() {
+    $('.stats').css('margin-left', '0');
+}) 
+$('.icon-chart-bar').on('mouseover', function() {
     $('.stats').css('margin-left', '0');
 }) 
 
