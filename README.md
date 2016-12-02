@@ -1,5 +1,7 @@
 # addOne
 
+https://regdarim.github.io/addOne/
+
 #add one
 
 The exercise is really just a simple addition of 1 to each digit.
@@ -15,5 +17,3 @@ spatial dimensions, etc. and system 2 (the cognitive, deliberately thinking part
 which kicks into gear when we're supposed to tackle more difficult tasks such as solving equations or other mental tasks. 
 If you want to know more, AsapSCIENCE made a nice video explaining the two systems in detail [1] or read the actual book.
 
-toggle menu
-+1
