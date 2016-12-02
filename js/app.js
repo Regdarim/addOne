@@ -15,11 +15,11 @@ $(document).ready(function() {
     var streak = 0;
     var time = 0;
 
-    $('.inputBox').keypress(function(event) {
+    $('.inputBox').keyup(function(event) {
             var keycode = (event.keyCode ? event.keyCode : event.which);
             
             if (keycode == '13' || keycode == '10') {
-                event.preventDefault();
+
 
                 var input = $('.inputBox').val();
                 input = input.toString().split('');
