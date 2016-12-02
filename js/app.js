@@ -15,7 +15,7 @@ $(document).ready(function() {
     var streak = 0;
     var time = 0;
 
-    $('.inputBox').keyup(function(event) {
+    $('.inputBox').keydown(function(event) {
             var keycode = (event.keyCode ? event.keyCode : event.which);
             
             if (keycode == '13' || keycode == '10') {
