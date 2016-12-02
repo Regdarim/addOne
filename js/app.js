@@ -19,6 +19,7 @@ $(document).ready(function() {
             var keycode = (event.keyCode ? event.keyCode : event.which);
             
             if (keycode == '13' || keycode == '10') {
+                event.preventDefault();
 
                 var input = $('.inputBox').val();
                 input = input.toString().split('');
