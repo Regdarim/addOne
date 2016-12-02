@@ -17,6 +17,7 @@ $(document).ready(function() {
 
     $('.inputBox').keypress(function(event) {
             var keycode = (event.keyCode ? event.keyCode : event.which);
+            $('.inputBox').trigger('submit');
             if (keycode == '13') {
                 var input = $('.inputBox').val();
                 input = input.toString().split('');
