@@ -142,14 +142,14 @@ body{
 
 
 .stats {
-    height: 17vh; /* 100% Full-height */
+    height: 25vh; /* 100% Full-height */
     width: 200px; /* 0 width - change this with JavaScript */
     margin-left: -200px;
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     bottom: 50px;
     left: 0;
-    background-color: #0bdbb6; /* Black*/
+    background-color: transparent; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     margin-left: 10px;
     padding-top: 60px; /* Place content 60px from the top */
@@ -164,19 +164,24 @@ body{
     opacity:1;
     transition: 1s
 }
+.stats .streak.old{
+bottom:130px;
+}
 
 .stats .streak{
 	position:absolute;
-	bottom:130px;
+	bottom:100px;
 	left:10px;
 
 	font-size:2em;
 	font-weight:600;
 	 padding: 2px 2px 2px 18px;
 }
+
+
 .stats .time{
 	position:absolute;
-	bottom:100px;
+	bottom:130px;
 	left:10px;
 
 	font-size:2em;

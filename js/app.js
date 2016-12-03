@@ -12,6 +12,11 @@ $(document).ready(function() {
     	$('.icon-info-circled-alt').trigger('click');
     	$('.closebtn').trigger('click');
     },1000)
+    setTimeout(function(){
+        $('.icon-chart-bar').trigger('mouseover');
+       
+    },2000)
+    
     var streak = 0;
     var time = 0;
 
@@ -33,7 +38,7 @@ $(document).ready(function() {
                     $('.container').text('good!');
                     pulsing($('.container'));
                     setTimeout(function() {
-                        $('.container').text('+1');
+                        $('.container').text('next!');
                         pulsing($('.container'))
                     }, 1100);
 
@@ -44,19 +49,20 @@ $(document).ready(function() {
 
                     addOne(counter);
                     streak++;
-                    $('.streak').text('streak: ' + streak);
+                    $('.new').text('streak: ' + streak);
                     console.log(counter);
 
 
                     time = 1;
                    
                 } else {
-                    //var wAns = minusOne(counter);
+                    counter = minusOne(counter);
                     var wAns = counter.join('');
+                    counter = addOne(counter);
                     $('.container').text(input.join(''));
                     shaking($('.container'));
                     setTimeout(function() {
-                        $('.container').text('try this!');
+                        $('.container').text('try again!');
                         pulsing($('.container'))
                     }, 1100);
                     setTimeout(function() {
@@ -65,41 +71,43 @@ $(document).ready(function() {
                     }, 2000);
 
                     $('.inputBox').val('');
+                   $('.old').text('last: ' + streak);
                     streak = 0;
-                    $('.streak').text('streak: ' + streak);
+                    $('.new').text('streak: ' + streak);
                     console.log(counter);
                     time = 0;
+
                     
                 }
 
-                $('.plusOne').fadeOut();
+                //$('.plusOne').fadeOut();
 
 
             }
 
-            $('.inputBox').keypress(function(event) {
-            var keycode = (event.keyCode ? event.keyCode : event.which);
-            if (keycode == '13') {
+   //          $('.inputBox').keypress(function(event) {
+   //          var keycode = (event.keyCode ? event.keyCode : event.which);
+   //          if (keycode == '13') {
 				
 
-				var start = new Date;
+			// 	var start = new Date;
                
-                if (time == 1) {
-                    var interval = setInterval(function() {
-                        $('.time').text(Math.round("seconds: "+(new Date - start) / 1000, 0))
-                    }, 1000);
+   //              if (time == 1) {
+   //                  var interval = setInterval(function() {
+   //                      $('.time').text(Math.round("seconds: "+(new Date - start) / 1000, 0))
+   //                  }, 1000);
 
 
-                    console.log(time);
-                } 
-                if(time==0) {
-                    console.log(time);
+   //                  console.log(time);
+   //              } 
+   //              if(time==0) {
+   //                  console.log(time);
 
-                    clearInterval(interval);
+   //                  clearInterval(interval);
                     
-                }
-       }
-   });
+   //              }
+   //     }
+   // });
 
     });
 
