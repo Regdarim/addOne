@@ -92,7 +92,7 @@ body{
 
 /* The side navigation menu */
 .leftSide {
-    height: 61vh; /* 100% Full-height */
+    height: 63vh; /* 100% Full-height */
     width: 300px; /* 0 width - change this with JavaScript */
     margin-left: -300px;
     position: fixed; /* Stay in place */
