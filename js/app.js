@@ -16,6 +16,9 @@ $(document).ready(function() {
         $('.icon-chart-bar').trigger('mouseover');
        
     },2000)
+
+
+    // blinking();
     
     var streak = 0;
     var time = 0;
@@ -252,6 +255,30 @@ function rnd() {
     })
 
 }
+
+
+// var clicked;
+//         $('#keyfob').focusout(function() {
+//             var s = $('#keyfob').attr("placeholder");
+//             clicked=true;
+//             blinking();    
+//         });
+//         $('#keyfob').click(function() {
+//             clicked=false;
+//             $('#keyfob').attr("placeholder", '');
+//         });
+        // function blinking() {
+               
+        //              $('#keyfob').attr("placeholder", '');
+        //         setTimeout(function() {
+        //             $('#keyfob').attr("placeholder", '.');
+        //             setTimeout(blinking, 500);
+        //         }, 1000);
+        //     }
+    
+     
+
+
 
 
 });
