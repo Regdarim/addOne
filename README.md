@@ -10,7 +10,7 @@ Notice that after 9 is 0. Pretty straight forward, huh?
 
 #origin
 
-In great detail Kahneman (btw. winner of the 2002 Nobel price in economics)
+In great detail Kahneman (btw. winner of the 2002 Nobel prize in economics)
 outlines the two apparent systems of our mind, notably system 1 and 2. 
 System 1 being the primal, quickly thinking part, which helps us recognize facial expressions, 
 spatial dimensions, etc. and system 2 (the cognitive, deliberately thinking part)
